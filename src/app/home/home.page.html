@@ -1,20 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <h1>Interpolação</h1>
+  <p>o nome do aluno é: {{nome}}</p>
+  <p>ano que vem, ele tera: {{idade+1}} anos</p>
+</ion-content>
+<ion-content>
+  <h1>Proprerty Biding</h1>
+  <p [style.background] =  "cor">ernuernhbuerire</p>
+</ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <h1>Event Biding</h1>
+  <ion-button (click) = "texto()">clica</ion-button>
+</ion-content>
+<ion-content>
+  <p>{{guardaTexto}}</p>
+  <input type="text" #frase (keyup.enter)="escreve(frase.value)">
+</ion-content>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  <select (change) = "modo(valor.value)" #valor>
+    <option value="'dark">escuro</option>
+    <option value="'light">escuro</option>
+  </select>
 </ion-content>
